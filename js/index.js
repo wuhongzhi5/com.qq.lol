@@ -82,16 +82,35 @@ $(document).scroll(function () {
 let index = 0
 let w = $('.lbt')[0].offsetWidth
 $('.lbt ul').width($('.lbt ul li').length * w)
-$('.xuanding').on('click', function () {
+$('.lbt-tab span').on('mouseover', function () {
+  $('.lbt-tab span').removeClass('xuanding')
+  index = $(this).index()
+  $('.lbt ul').stop().animate({
+    left: -index * w
+  }, 200)
+  $('.lbt-tab span').eq(index).addClass('xuanding')
+})
+setInterval(function () {
+  $('.lbt-tab span').removeClass('xuanding')
   index++
   if (index >= $('.lbt ul li').length) {
     index = 0
     $('.lbt ul').animate({
       left: 0
     })
+    $('.lbt-tab span').eq(0).addClass('xuanding')
   } else {
     $('.lbt ul').animate({
       left: -index * w
-    }, 1000)
+    }, 200)
+    $('.lbt-tab span').eq(index).addClass('xuanding')
   }
+}, 3000)
+//第一部分右侧tab切换
+$('.tab-top ul li').on('mouseover', function () {
+  let index = $(this).index()
+  $('.tab-top ul li').removeClass('tab-top-xd')
+  $(this).addClass('tab-top-xd')
+  $('.new ul').removeClass('new-show')
+  $('.new ul').eq(index).addClass('new-show')
 })
