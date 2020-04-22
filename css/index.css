@@ -193,9 +193,8 @@ body {
   border-image-slice: 1; 
 }
 .detailed:hover {
-  border-image: linear-gradient(to bottom,rgb(128, 97, 43) 0,rgb(  209, 161, 61) 100%);
-  color:rgb(255, 240, 153);
-  border-image-slice: 1; 
+  filter:brightness(1.15);
+  transition:all 0.5s;
 }
 .ssinput {
   display: none;
@@ -322,6 +321,7 @@ body {
   margin-top: 30px;
 }
 .head-login a {
+  position: relative;
   display: block;
   width: 100%;
   height: 44px;
@@ -333,9 +333,11 @@ body {
   margin-top: 20px;
 }
 .head-login a i {
+  position: absolute;
+  top: 18px;
+  right: 84px;
   display: inline-block;
   vertical-align: middle;
-  margin: -2px 0 0 5px;
   background-position: -213px -126px;
   width: 15px;
   height: 9px;
@@ -631,4 +633,722 @@ body {
 }
 .new ul .jx a:hover {
   color: rgb(75, 163, 106);
+}
+.yuedu {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 496px;
+  height: 40px;
+  background-color: #e3e2e2;
+  line-height: 40px;
+  text-align: center;
+}
+.yd1 {
+  font-size: 14px;
+  color: #676767;
+}
+.yd2 {
+  font-size: 14px;
+  color: #7ea1a6;
+}
+.yuedu i {
+  position: absolute;
+  top: 18px;
+  right: 170px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: -2px 0 0 5px;
+  background-position: -213px -126px;
+  width: 15px;
+  height: 9px;
+  background-image: url(../images/comm-spr.png);
+  background-size: 393px 200px;
+  background-repeat: no-repeat;
+}
+.hot {
+  width: 820px;
+  height: 335px;
+  float: left;
+  margin-top: 50px;
+}
+.hot-top {
+  width: 100%;
+  height: 35px;
+  overflow: visible;
+  position: relative;
+}
+.hot-top h2 {
+  position: absolute;
+  width: auto;
+  height: 28px;
+  top: 5px;
+  left: -6px;
+  box-sizing: border-box;
+  color: #0b0b0b;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 400;
+}
+.hot-top h2::before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 4px;
+  height: 28px;
+  background-color: #1da6ba;
+  margin-right: 10px;
+}
+.hot-top ul {
+  position: absolute;
+  width: 692px;
+  height: 35px;
+  left: 128px;
+  box-sizing: border-box;
+  border-bottom: 1px #e0e2e2 solid;
+}
+.hot-top li {
+  list-style: none;
+  position: relative;
+  cursor: pointer;
+  float: left;
+  width: auto;
+  min-width: 40px;
+  height: 37px;
+  overflow: visible;
+  color: #676767;
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 35px;
+  text-align: center;
+  margin-right: 40px;
+}
+.hot-top .tab-top-xd {
+  font-weight: 700;
+  color: #1da6ba;
+}
+.hot-top a {
+  position: absolute;
+  top: 0;
+  right: 2px;
+  display: block;
+  width: 60px;
+  height: 35px;
+  font-size: 12px;
+  color: #7ea1a6;
+  line-height: 35px;
+  z-index: 1;
+  text-align: center;
+}
+.hot-top a i {
+  position: absolute;
+  top: 15px;
+  right: 0px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: -2px 0 0 5px;
+  background-position: -213px -126px;
+  width: 15px;
+  height: 9px;
+  background-image: url(../images/comm-spr.png);
+  background-size: 393px 200px;
+  background-repeat: no-repeat;
+}
+.hot-bottom {
+  width: 820px;
+  height: 278px;
+  margin-top: 21px;
+  position: relative;
+}
+.hot-bottom ul {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.hot-bottom .hot-show {
+  display: block;
+}
+.hot-bottom ul li {
+  cursor: pointer;
+  float: left;
+  width: 193px;
+  height: 278px;
+  overflow: hidden;
+  position: relative;
+  background-color: #fefefe;
+  transform: translateY(0);
+  transition: all 0.5s;
+}
+.hot-bottom ul li:nth-last-child(-n+3) {
+  margin-left: 16px;
+}
+.hot-bottom li img {
+  display: block;
+  width: 193px;
+  height: 207px;
+}
+.hot-bottom li>p {
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 6px 10px 4px 10px;
+  font-size: 14px;
+  color: #424242;
+  line-height: 18px;
+  text-align: left;
+}
+.hot-bottom li a {
+  position: absolute;
+  font-size: 12px;
+  color: #1da6ba;
+  left: 10px;
+  bottom: 6px;
+}
+.hot-bottom li>i {
+  position: absolute;
+  right: 10px;
+  bottom: 8px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 29px;
+  height: 14px;
+  background-image: url(../images/comm-spr.png);
+  background-size: 393px 200px;
+  background-repeat: no-repeat;
+  background-position: -301px -46px;
+}
+.hot-hover {
+  display: none;
+  width: 193px;
+  height: 207px;
+  line-height: 207px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  background-color: rgba(0,0,0,0.7);
+}
+.hot-hover i {
+  display: block;
+  position: absolute;
+  left: 50%;
+  margin-left: -94px;
+  top: 50%;
+  margin-top: -100px;
+  width: 188px;
+  height: 200px;
+  background-image: url(../images/comm-spr.png);
+  background-size: 393px 200px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.hot-hover div {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  line-height: 1.5;
+  padding: 0 10px;
+}
+.hot-hover div h4 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #cdbe91;
+}
+.hot-hover div p {
+  font-size: 12px;
+  color: #9d9c9c;
+  overflow: hidden;
+}
+.hot-bottom ul li:hover .hot-hover {
+  display: block;
+}
+.hot-bottom ul li:hover {
+  transform: translateY(-10px);
+}
+.download {
+  width: 496px;
+  height: 335px;
+  float: right;
+  margin-top: 50px;
+  position: relative;
+}
+.download ul li {
+  float: left;
+  cursor: pointer;
+  position: relative;
+}
+.l1 video {
+  display: block;
+  width: 366px;
+  height: 168px;
+}
+.download ul .li{
+  filter:brightness(1);
+}
+.download ul .l1:hover{
+  filter:brightness(1.15);
+  transition:all 1s;
+}
+.look:hover {
+  /* 滤镜 */
+  /* 给图片应用一种线性乘法，使其看起来更亮或更暗。
+  如果值是0%，图像会全黑。值是100%，则图像无变化。
+  其他的值对应线性乘数效果。值超过100%也是可以的，
+  图像会比原来更亮。如果没有设定值，默认是1。 */
+  filter:brightness(1.15);
+  transition:all 0.5s;
+}
+.l2,.l3 {
+  width: 118px;
+  height: 76px;
+  margin-left: 12px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 76px;
+  overflow: hidden;
+  position: relative;
+  background-image: url(../images/index-spr.png);
+  background-size: 638px 572px;
+  background-repeat: no-repeat;
+  background-position: -193px -316px;
+}
+.download .l3 {
+  margin: 17px 0 0 12px;
+}
+.download .l3:hover {
+  filter:brightness(1.15);
+  transition:all 0.5s;
+}
+.l2-hover {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  overflow: hidden;
+  background-color: #fff;
+}
+.l2-hover a {
+  float: left;
+  width: 60px;
+  box-sizing: border-box;
+  border-right: 1px #eee solid;
+  color: #424242;
+  font-size: 12px;
+  line-height: 30px;
+}
+.l2-hover a i {
+  display: block;
+  margin: 18px auto 0;
+  width: 20px;
+  height: 22px;
+  background-image: url(../images/comm-spr.png);
+  background-size: 393px 200px;
+  background-repeat: no-repeat;
+}
+.zhiyin {
+  background-position: -244px -72px;
+}
+.libao {
+  background-position: -285px -99px;
+}
+@keyframes sf {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.3);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.l2-hover a:first-child:hover .zhiyin {
+  animation: sf 0.5s linear;
+}
+.l2-hover a:hover {
+  color: rgb(13, 160, 180);
+}
+.l2-hover a:last-child:hover .libao {
+  animation: sf 0.5s linear;
+}
+.l2:hover .l2-hover {
+  display: block;
+}
+.l4 a,.l5 a {
+  float: left;
+  width: 112px;
+  height: 68px;
+  color: #424242;
+  text-align: center;
+  line-height: 68px;
+  background-color: #fefefe;
+}
+.l4 {
+  margin: 15px 16px 0 0;
+}
+.l4 i,.l5 i {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -4px;
+  width: 22px;
+  height: 20px;
+  background-image: url(../images/comm-spr.png);
+  background-size: 393px 200px;
+  background-repeat: no-repeat;
+}
+.l5 {
+  margin-top: 15px;
+}
+.l4 b {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-position: -301px -46px;
+  width: 29px;
+  height: 14px;
+  background-image: url(../images/comm-spr.png);
+  background-size: 393px 200px;
+  background-repeat: no-repeat;
+}
+.download ul li:nth-child(4) i {
+  background-position: -316px -12px;
+}
+.download ul li:nth-child(5) i {
+  background-position: -219px -72px;
+}
+.download ul li:nth-child(6) i {
+  background-position: -343px -12px;
+}
+.download ul li:nth-child(7) i {
+  background-position: -193px -72px;
+}
+.download ul li:nth-child(8) i {
+  background-position: -280px -125px;
+}
+.download ul li:nth-child(9) i {
+  background-position: -371px -12px;
+}
+.download ul li:nth-child(10) i {
+  background-position: -274px -46px;
+}
+.download ul li:nth-child(11) i {
+  background-position: -193px -46px;
+}
+.download ul li:nth-last-child(-n+8):hover i {
+  animation: sf 0.5s linear;
+}
+.download ul li:hover a {
+  border-radius:4px;
+  box-shadow:0 0 10px #ccc;
+  color:#0da0b4;
+}
+.hero {
+  float: left;
+  width: 820px;
+  height: 254px;
+  margin-top: 51px;
+}
+.hero-left {
+  float: left;
+  position: relative;
+  width: 402px;
+  height: 254px;
+  background-color: #f7f6f6;
+}
+.hero-left>i,.hero-right i {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-image: url(http://game.gtimg.cn/images/lol/v3/pic-mask-0.png);
+  width: 100%;
+  height: 133px;
+}
+.hero-left>a,.hero-right>a {
+  position: absolute;
+  display: block;
+  left: 9px;
+  top: 9px;
+  width: auto;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: 2px;
+  font-size: 12px;
+  text-align: center;
+  color: #cdbe91;
+  line-height: 19px;
+  background-color: #000;
+}
+.hero-p1 {
+  width: 100%;
+  padding: 0 17px;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  bottom: 33px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #cdbe91;
+}
+.hero-p2 {
+  width: 100%;
+  padding-left: 17px;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  bottom: 12px;
+  font-size: 14px;
+  color: #cfcfcf;
+}
+.hero-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 402px;
+  height: 254px;
+  overflow: hidden;
+  opacity: 0;
+  z-index: 11;
+  transform: translateY(5px);
+  background-color: rgb(0,0,0,0.7);
+}
+.hero-left:hover .hero-hover {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.5s;
+}
+.hero-hover>i {
+  display: block;
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 396px;
+  height: 248px;
+  background-image: url(../images/index-spr.png);
+  background-size: 638px 572px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.hero-hover p {
+  color: #cdbe91;
+  font-size: 18px;
+  position: absolute;
+  left: 27px;
+  top: 20px;
+}
+.hero-hover a {
+  position: absolute;
+  left: 25px;
+  bottom: 18px;
+  display: block;
+  width: 154px;
+  height: 42px;
+  color: #ffdb8b;
+  font-size: 14px;
+  text-align: center;
+  line-height: 42px;
+  background-image: url(../images/index-spr.png);
+  background-size: 638px 572px;
+  background-repeat: no-repeat;
+  background-position: -401px -179px;
+}
+.hero-hover a i {
+  display: inline-block;
+  vertical-align: middle;
+  width: 15px;
+  height: 9px;
+  background-image: url(../images/comm-spr.png);
+  background-size: 393px 200px;
+  background-repeat: no-repeat;
+  background-position: -362px -99px;
+}
+.hero-hover a:hover {
+  filter:brightness(1.15);
+  transition:all 0.5s;
+}
+.hero-right {
+  float: left;
+  position: relative;
+  width: 402px;
+  height: 254px;
+  background-color: #f7f6f6;
+  margin-left: 16px;
+}
+.video-show {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: -20px;
+  width: 435px;
+  margin-left: -217px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 0 20px #aaa;
+}
+.video-show img {
+  display: block;
+  width: 435px;
+  height: 244px;
+}
+.video-hover {
+  width: 435px;
+  height: 244px;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.video-p1 {
+  margin-top: 10px;
+  width: 270px;
+  height: 24px;
+  overflow: hidden;
+  line-height: 24px;
+  box-sizing: border-box;
+  padding-left: 11px;
+  color: #0b0b0b;
+  font-size: 16px;
+  text-align: left;
+}
+.video-p2 {
+  width: 270px;
+  height: 20px;
+  overflow: hidden;
+  line-height: 20px;
+  box-sizing: border-box;
+  padding-left: 11px;
+  color: #a1a1a2;
+  font-size: 12px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+.video-show>a {
+  position: absolute;
+  right: 10px;
+  bottom: 17px;
+  display: block;
+  width: 86px;
+  height: 29px;
+  line-height: 27px;
+  overflow: hidden;
+  color: #bb9a6c;
+  font-size: 14px;
+  text-align: center;
+  box-sizing: border-box;
+  border: 1px #bb9a6c solid;
+}
+.video-show>a:hover {
+  background-color: #bb9a6c;
+  color: #fff;
+}
+.video-hover .tx {
+  position: relative;
+  display: block;
+  width: 435px;
+  height: 244px;
+  cursor: auto;
+  color: #fff;
+}
+.yy-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  opacity: 1;
+  height: 120px;
+  background-image: linear-gradient(0deg,rgba(0,0,0,.5) 0,rgba(0,0,0,0));
+  background-position: 0 bottom;
+  background-repeat: repeat-x;
+}
+.tx-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.tx-video video {
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.banben-nav {
+  width: 496px;
+  height: 255px;
+  float: right;
+  position: relative;
+  padding-top: 51px;
+}
+.nav1 {
+  background-color: #f7f6f6;
+  position: relative;
+  float: left;
+  width: 240px;
+  height: 120px;
+  overflow: visible;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.nav1 img {
+  width: 240px;
+  height: 120px;
+}
+.nav1-hover {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: -20px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 0 20px #aaa;
+  width: 270px;
+  margin-left: -135px;
+}
+.nav1-p1 {
+  margin-top: 10px;
+  width: 270px;
+  height: 24px;
+  overflow: hidden;
+  line-height: 24px;
+  box-sizing: border-box;
+  padding-left: 11px;
+  color: #0b0b0b;
+  font-size: 16px;
+  text-align: left;
+}
+.nav1-p2 {
+  width: 270px;
+  height: 20px;
+  overflow: hidden;
+  line-height: 20px;
+  box-sizing: border-box;
+  padding-left: 11px;
+  color: #a1a1a2;
+  font-size: 12px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+.nav1-hover img {
+  width: 270px;
+  height: 186px;
 }
