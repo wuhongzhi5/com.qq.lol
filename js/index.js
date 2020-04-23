@@ -115,75 +115,6 @@ $('.tab-top ul li').on('mouseover', function () {
   $('.new ul').removeClass('new-show')
   $('.new ul').eq(index).addClass('new-show')
 })
-//鼠标移入顶部登录显示后的个人中心小箭头动画
-$('.head-login a').on('mouseenter', function () {
-  let timer = setInterval(function () {
-    $('.head-login a i').animate({
-      'right': '80'
-    }, 150, function () {
-      $('.head-login a i').animate({
-        'right': '84'
-      }, 150, function () {
-        $('.head-login a i').animate({
-          'right': '80'
-        }, 150, function () {
-          $('.head-login a i').animate({
-            'right': '84'
-          }, 150)
-        })
-      })
-    })
-  }, 1500)
-  $('.head-login a').on('mouseleave', function () {
-    clearInterval(timer)
-  })
-})
-//第一板块tab切中鼠标移入小箭头动画
-$('.yuedu').on('mouseenter', function () {
-  let timer = setInterval(function () {
-    $('.yuedu i').animate({
-      'right': '166'
-    }, 150, function () {
-      $('.yuedu i').animate({
-        'right': '170'
-      }, 150, function () {
-        $('.yuedu i').animate({
-          'right': '166'
-        }, 150, function () {
-          $('.yuedu i').animate({
-            'right': '170'
-          }, 150)
-        })
-      })
-    })
-  }, 1500)
-  $('.yuedu').on('mouseleave', function () {
-    clearInterval(timer)
-  })
-})
-//热门活动小箭头
-$('.hot-top a').on('mouseenter', function () {
-  let timer = setInterval(function () {
-    $('.hot-top a i').animate({
-      'right': '-4'
-    }, 150, function () {
-      $('.hot-top a i').animate({
-        'right': '0'
-      }, 150, function () {
-        $('.hot-top a i').animate({
-          'right': '-4'
-        }, 150, function () {
-          $('.hot-top a i').animate({
-            'right': '0'
-          }, 150)
-        })
-      })
-    })
-  }, 1500)
-  $('.hot-top a').on('mouseleave', function () {
-    clearInterval(timer)
-  })
-})
 //热门活动tab切换
 $('.hot-top ul li').on('mouseover', function () {
   let index = $(this).index()
@@ -192,12 +123,60 @@ $('.hot-top ul li').on('mouseover', function () {
   $('.hot-bottom ul').removeClass('hot-show')
   $('.hot-bottom ul').eq(index).addClass('hot-show')
 })
-//视频显示
+//视频显示，鼠标移入第一板块视频显示下拉
 $('.hero-right').on('mouseenter', function () {
   $('.video-show').fadeIn(200)
   $('.tx-video video')[0].play()
+  $('.more').stop().animate({ 'overflow': 'visible', 'marginTop': '42px', 'height': '117px' }, 300)
 })
 $('.video-show').on('mouseleave', function () {
-  $('.video-show').stop().hide()
+  $('.video-show').fadeOut(0)
   $('.tx-video video')[0].pause()
+  $('.more').stop().animate({ 'overflow': 'hidden', 'marginTop': '0', 'height': '0' }, 300)
+})
+$('.more').on('mouseenter', function () {
+  $('.more').stop().animate({ 'overflow': 'visible', 'marginTop': '42px', 'height': '117px' }, 300)
+})
+$('.more').on('mouseleave', function () {
+  $('.more').stop().animate({ 'overflow': 'hidden', 'marginTop': '0', 'height': '0' }, 300)
+})
+//10.8显示
+$('.nav1').on('mouseenter', function () {
+  $('.nav1-hover').fadeIn(200)
+})
+$('.nav1-hover').on('mouseleave', function () {
+  $('.nav1-hover').fadeOut(0)
+})
+//鼠标移入周免显示周免
+$('.weekfree').on('mouseenter', function () {
+  $('.week-hover').show()
+  $('.week-hover').stop().animate({ 'top': '315px' }, 200)
+})
+$('.weekfree').on('mouseleave', function () {
+  $('.week-hover').hide()
+  $('.week-hover').stop().animate({ 'top': '310px' })
+})
+$('.week-hover').on('mouseenter', function () {
+  $('.week-hover').show()
+  $('.week-hover').stop().animate({ 'top': '315px' }, 200)
+})
+$('.week-hover').on('mouseleave', function () {
+  $('.week-hover').hide()
+  $('.week-hover').stop().animate({ 'top': '310px' })
+})
+//最新视频tab切换
+$('.new-video-top>ul li').on('mouseover', function () {
+  let index = $(this).index()
+  console.log(index)
+  $('.new-video-top>ul li').removeClass('tab-top-xd')
+  $(this).addClass('tab-top-xd')
+  $('.new-video>ul').removeClass('video-item')
+  $('.new-video>ul').eq(index).addClass('video-item')
+  if (index == 0) {
+    $('.new-video-top span').text('换一批').append('<i></i>')
+    $('.new-video-top span i').css('background-position', '-369px -46px')
+  } else {
+    $('.new-video-top span').text('下一页').append('<i></i>')
+    $('.new-video-top span i').css('background-position', '-308px -99px')
+  }
 })
