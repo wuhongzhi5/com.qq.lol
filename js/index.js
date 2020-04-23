@@ -188,7 +188,7 @@ $('.program-right').on('click', function () {
   if (flag) {
     flag = false
     num++
-    $('.program-bottom-show').stop().animate({ 'left': -num * lbtLeft }, 1000, function () {
+    $('.program-bottom-show').stop().animate({ 'left': -num * lbtLeft }, 300, function () {
       flag = true
     })
     if (num == 2) {
@@ -205,11 +205,12 @@ $('.program-left').on('click', function () {
       $('.program-bottom-show').animate({ 'left': -num * lbtLeft }, 0)
     }
     num--
-    $('.program-bottom-show').animate({ 'left': -num * lbtLeft }, 1000, function () {
+    $('.program-bottom-show').animate({ 'left': -num * lbtLeft }, 300, function () {
       flag = true
     })
   }
 })
+
 //热门专辑tab切换
 $('.program-top>ul li').on('mouseover', function () {
   num = 0
@@ -219,4 +220,16 @@ $('.program-top>ul li').on('mouseover', function () {
   $(this).addClass('tab-top-xd')
   $('.program-bottom ul').removeClass('program-bottom-show')
   $('.program-bottom ul').eq(index).addClass('program-bottom-show')
+})
+//热门专辑轮播图自动轮播
+let timer = setInterval(function () {
+  $('.program-right').click()
+}, 3000)
+$('.program-bottom').on('mouseover', function () {
+  clearInterval(timer)
+})
+$('.program-bottom').on('mouseout', function () {
+  timer = setInterval(function () {
+    $('.program-right').click()
+  }, 3000)
 })
