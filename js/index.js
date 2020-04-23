@@ -180,3 +180,43 @@ $('.new-video-top>ul li').on('mouseover', function () {
     $('.new-video-top span i').css('background-position', '-308px -99px')
   }
 })
+//热门专辑轮播图
+let num = 0
+let flag = true
+let lbtLeft = $('.program-bottom').width() + 15
+$('.program-right').on('click', function () {
+  if (flag) {
+    flag = false
+    num++
+    $('.program-bottom-show').stop().animate({ 'left': -num * lbtLeft }, 1000, function () {
+      flag = true
+    })
+    if (num == 2) {
+      num = 0
+      $('.program-bottom-show').animate({ 'left': num }, 0)
+    }
+  }
+})
+$('.program-left').on('click', function () {
+  if (flag) {
+    flag = false
+    if (num == 0) {
+      num = 2
+      $('.program-bottom-show').animate({ 'left': -num * lbtLeft }, 0)
+    }
+    num--
+    $('.program-bottom-show').animate({ 'left': -num * lbtLeft }, 1000, function () {
+      flag = true
+    })
+  }
+})
+//热门专辑tab切换
+$('.program-top>ul li').on('mouseover', function () {
+  num = 0
+  $('.program-bottom-show').animate({ 'left': num }, 0)
+  let index = $(this).index()
+  $('.program-top>ul li').removeClass('tab-top-xd')
+  $(this).addClass('tab-top-xd')
+  $('.program-bottom ul').removeClass('program-bottom-show')
+  $('.program-bottom ul').eq(index).addClass('program-bottom-show')
+})

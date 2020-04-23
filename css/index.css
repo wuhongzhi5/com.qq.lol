@@ -1618,6 +1618,8 @@ body {
   width: 100%;
   background-color: #e3e2e2;
   padding: 64px 0 66px 0;
+  position: relative;
+  z-index: 1;
 }
 .new-video {
   position: relative;
@@ -1914,8 +1916,15 @@ body {
   overflow: hidden;
 }
 .program-bottom ul {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 1881px;
   height: 337px;
+}
+.program-bottom .program-bottom-show {
+  display: block;
 }
 .program-bottom ul li {
   float: left;
@@ -2018,4 +2027,27 @@ body {
   background-size: 393px 200px;
   background-repeat: no-repeat;
   background-position: -362px -99px;
+}
+.program-left,.program-right {
+  position: absolute;
+  width: 23px;
+  height: 51px;
+  top: 89px;
+  background-image: url(../images/index-spr.png);
+  background-size: 638px 572px;
+  background-repeat: no-repeat;
+}
+.program-left {
+  background-position: -221px -397px;
+  left: -29px;
+}
+.program-right {
+  background-position: -193px -397px;
+  right: -29px;
+}
+.program-b {
+  position: relative;
+}
+.program-left:hover,.program-right:hover {
+  filter: brightness(1.08);
 }
