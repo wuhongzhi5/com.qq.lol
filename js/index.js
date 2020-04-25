@@ -233,3 +233,34 @@ $('.program-bottom').on('mouseout', function () {
     $('.program-right').click()
   }, 3000)
 })
+//赛事中心swiper轮播
+var swiper = new Swiper('.game-show', {
+  slidesPerView: 5,
+  slidesPerGroup: 5,
+  spaceBetween: 16,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+//积分榜滚动条
+var s = new Swiper('.list', {
+  direction: 'vertical',
+  slidesPerView: 'auto',
+  freeMode: true,
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    draggable: true,
+    snapOnRelease: false
+  },
+  mousewheel: true
+});
+s.scrollbar.$dragEl.css('background', '#abc0c3');
+s.scrollbar.$el.css({ 'backgroundColor': '#fff' })
+$('.list').removeClass('swiper-container-horizontal')
+$('.list').on('mouseover', function () {
+  s.scrollbar.$el.css('width', '8px');
+})
+$('.list').on('mouseout', function () {
+  s.scrollbar.$el.css('width', '5px');
+})
