@@ -2050,6 +2050,7 @@ body {
   color: #676767;
 }
 .game-container {
+  display: none;
   width: 100%;
   height: auto;
   position: relative;
@@ -2187,7 +2188,7 @@ body {
 #roll-left,#roll-right {
   position: absolute;
   opacity: 1;
-  bottom: 74px;
+  top: 125px;
   width: 23px;
   height: 51px;
   background-image: url(../images/index-spr.png);
@@ -2402,4 +2403,296 @@ body {
   text-align: center;
   font-size: 16px;
   color: #5f8d94;
+}
+.game-sec {
+  display: none;
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 0;
+  left: 0;
+  padding-top: 26px;
+}
+.game-cen {
+  position: relative;
+  height: 418px;
+}
+.list-col {
+  height: auto;
+  width: 268px;
+  float: left;
+}
+.link {
+  float: left;
+  display: block;
+  width: 85px;
+  height: 156px;
+  box-sizing: border-box;
+  border-top: 1px #c2c2c2 solid;
+  border-bottom: 1px #c2c2c2 solid;
+  margin-top: 106px;
+}
+.list-col>div {
+  width: 100%;
+  height: auto;
+  margin-bottom: 39px;
+}
+.part-time {
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  text-align: left;
+  color: #29a2b4;
+  font-size: 16px;
+  font-weight: 700;
+  box-sizing: border-box;
+  padding-left: 1px;
+}
+.info {
+  width: 100%;
+  height: 20px;
+  margin-bottom: 7px;
+}
+.info .finish {
+  float: left;
+  height: 15px;
+  line-height: 15px;
+  padding: 0 2px;
+  font-size: 12px;
+  color: #fff;
+  border-radius: 2px;
+  margin-top: 3px;
+  background-color: #bcbcbc;
+}
+.info-time {
+  float: left;
+  margin-left: 10px;
+  height: 15px;
+  line-height: 15px;
+  color: #676767;
+  font-size: 12px;
+  margin-top: 3px;
+}
+.info-video {
+  float: right;
+  padding: 0 6px;
+  box-sizing: border-box;
+  border: 1px solid #bb9a6c;
+  font-size: 14px;
+  height: 20px;
+  line-height: 18px;
+  margin-left: 10px;
+  color: #bb9a6c;
+}
+.info-data {
+  float: right;
+  padding: 0 6px;
+  box-sizing: border-box;
+  border: 1px solid #7ea1a6;
+  font-size: 14px;
+  height: 20px;
+  line-height: 18px;
+  margin-left: 10px;
+  color: #7ea1a6;
+}
+.team {
+  width: 100%;
+  height: 44px;
+  position: relative;
+  background-color: #f7f6f6;
+  margin-bottom: 1px;
+}
+.team span {
+  float: left;
+  width: 40px;
+  height: 44px;
+  text-align: center;
+  line-height: 41px;
+  margin-left: 6px;
+}
+.team span img {
+  vertical-align: middle;
+  height: 30px;
+}
+.team-name {
+  float: left;
+  font-size: 16px;
+  height: 44px;
+  line-height: 44px;
+  color: #676767;
+  margin-left: 8px;
+}
+.session {
+  float: right;
+  width: 23px;
+  height: 44px;
+  text-align: center;
+  line-height: 44px;
+  color: #fff;
+  background-color: #bcbcbc;
+  font-size: 16px;
+}
+.win .session {
+  background-color: #86a2ad;
+}
+.pending .session {
+  background-color: #d1a662;
+}
+.pending {
+  background-color: #faf6ec;
+}
+.info-video:hover {
+  color: #fff;
+  background-color: #bb9a6c;
+}
+.info-data:hover {
+  color: #fff;
+  background-color: #7ea1a6;
+}
+.info .finish2 {
+  background-color: #e68f21;
+}
+.link-sec {
+  float: left;
+  display: block;
+  margin-top: 106px;
+  width: 110px;
+  height: 155px;
+  background-image: url(../images/events-spr.png);
+  background-size: 699px 607px;
+  background-repeat: no-repeat;
+  background-position: 0 -452px;
+}
+.game-cen .list-top {
+  padding-top: 77px;
+}
+.wrap3 .match-show {
+  display: block;
+}
+.wrap4 {
+  height: auto;
+  margin-top: 0;
+  padding: 66px 0 66px 0;
+  position: relative;
+  width: 100%;
+  min-width: 1358px;
+  overflow: hidden;
+  background-color: #e3e2e2;
+}
+.hero-data {
+  width: 100%;
+  height: 35px;
+  position: relative;
+}
+.hero-ul {
+  position: absolute;
+  height: 35px;
+  left: 128px;
+}
+.hero-ul li {
+  position: relative;
+  cursor: pointer;
+  float: left;
+  width: auto;
+  height: 37px;
+  color: #676767;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding-left: 28px;
+  line-height: 42px;
+  margin-right: 40px;
+}
+.hero-ul li::after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 11px;
+  left: 2px;
+  margin-left: 0;
+  width: 20px;
+  height: 19px;
+  background-image: url(../images/index-spr.png);
+  background-size: 638px 572px;
+  background-repeat: no-repeat;
+  background-position: -406px -316px;
+}
+.hero-ul .hero-li {
+  font-weight: 700;
+  color: #1da6ba;
+}
+.hero-ul .hero-li::after {
+  background-position: -431px -316px;
+}
+.arrowhead-sec {
+  width: 75px;
+}
+.heropeople {
+  display: block;
+  position: relative;
+  margin-top: 21px;
+  width: 1390px;
+  height: 438px;
+  top: 0px;
+  left: 0;
+  cursor: grab;
+}
+.heropeople ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: auto;
+  background-color: transparent;
+  display: none;
+}
+.heropeople .hero-hide {
+  display: block;
+}
+.hero-img {
+  float: left;
+  width: 90px;
+  height: 100px;
+  overflow: visible;
+  margin: 0 16px 12px 0;
+  position: relative;
+  cursor: pointer;
+}
+.hero-img img {
+  display: block;
+  margin: 0 auto;
+  width: 66px;
+  height: 66px;
+}
+.hero-img i {
+  display: none;
+  position: absolute;
+  width: 66px;
+  height: 66px;
+  top: 0;
+  left: 12px;
+  background-color: rgba(0,0,0,0.7);
+}
+.hero-img i span {
+  display: block;
+  margin: 23px auto;
+  width: 21px;
+  height: 21px;
+  background-image: url(../images/index-spr.png);
+  background-size: 617px 559px;
+  background-repeat: no-repeat;
+  background-position: -386px -221px;
+}
+.hero-img p {
+  width: 90px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 12px;
+  color: #333;
+}
+.hero-img:hover i {
+  display: block;
+}
+.hero-img:hover p {
+  color: #1da6ba;
 }

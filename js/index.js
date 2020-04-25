@@ -249,7 +249,7 @@ var s = new Swiper('.list', {
   slidesPerView: 'auto',
   freeMode: true,
   scrollbar: {
-    el: '.swiper-scrollbar',
+    el: '.swiper-item',
     draggable: true,
     snapOnRelease: false
   },
@@ -257,10 +257,64 @@ var s = new Swiper('.list', {
 });
 s.scrollbar.$dragEl.css('background', '#abc0c3');
 s.scrollbar.$el.css({ 'backgroundColor': '#fff' })
-$('.list').removeClass('swiper-container-horizontal')
 $('.list').on('mouseover', function () {
   s.scrollbar.$el.css('width', '8px');
 })
 $('.list').on('mouseout', function () {
   s.scrollbar.$el.css('width', '5px');
+})
+//赛事中心tab切换
+let arr = []
+let gameTab1 = $('.game-container')
+let gameTab2 = $('.game-sec')
+arr.push(gameTab1, gameTab2)
+$('.game-top>ul li').on('mouseover', function () {
+  let index = $(this).index()
+  $('.game-top>ul li').removeClass('tab-top-xd')
+  $(this).addClass('tab-top-xd')
+  for (let i = 0; i < arr.length; i++) {
+    arr[i].removeClass('match-show')
+  }
+  arr[index].addClass('match-show')
+})
+//英雄资料滚动条
+function fn() {
+  var hero = new Swiper('.heropeople', {
+    direction: 'vertical',
+    slidesPerView: 'auto',
+    freeMode: true,
+    scrollbar: {
+      el: '.swiper-hero',
+      draggable: true,
+      snapOnRelease: false
+    },
+    mousewheel: true,
+  })
+  hero.scrollbar.$dragEl.css('background', '#abc0c3');
+  hero.scrollbar.$el.css({ 'backgroundColor': 'transparent' })
+  $('.heropeople').on('mouseover', function () {
+    hero.scrollbar.$el.css('width', '10px');
+  })
+  $('.heropeople').on('mouseout', function () {
+    hero.scrollbar.$el.css('width', '5px');
+  })
+  hero.scrollbar.updateSize()
+}
+fn()
+//英雄资料tab切换
+var ss = 0
+$('.hero-ul li').on('mouseover', function () {
+  $(this).addClass('hero-li')
+})
+$('.hero-ul li').on('mouseout', function () {
+  $(this).removeClass('hero-li')
+  $('.hero-ul li').eq(ss).addClass('hero-li')
+})
+$('.hero-ul li').on('click', function () {
+  ss = $(this).index()
+  $('.hero-ul li').removeClass('hero-li')
+  $(this).addClass('hero-li')
+  $('.heropeople ul').removeClass('hero-hide')
+  $('.heropeople ul').eq(ss).addClass('hero-hide')
+  fn()
 })
