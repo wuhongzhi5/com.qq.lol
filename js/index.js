@@ -280,15 +280,21 @@ $('.game-top>ul li').on('mouseover', function () {
 //英雄资料滚动条
 function fn() {
   var hero = new Swiper('.heropeople', {
+    //上下滑动
     direction: 'vertical',
+    // 设置slider容器能够同时显示的slides数量,'auto'则自动根据slides的宽度来设定数量
     slidesPerView: 'auto',
+    // slide会根据惯性滑动可能不止一格且不会贴合。
     freeMode: true,
+    //滚动条
     scrollbar: {
       el: '.swiper-hero',
       draggable: true,
       snapOnRelease: false
     },
     mousewheel: true,
+    //启动动态检查器,自动初始化swiper
+    observer: true,
   })
   hero.scrollbar.$dragEl.css('background', '#abc0c3');
   hero.scrollbar.$el.css({ 'backgroundColor': 'transparent' })
@@ -298,7 +304,6 @@ function fn() {
   $('.heropeople').on('mouseout', function () {
     hero.scrollbar.$el.css('width', '5px');
   })
-  hero.scrollbar.updateSize()
 }
 fn()
 //英雄资料tab切换
@@ -317,4 +322,46 @@ $('.hero-ul li').on('click', function () {
   $('.heropeople ul').removeClass('hero-hide')
   $('.heropeople ul').eq(ss).addClass('hero-hide')
   fn()
+})
+//合作媒体滚动条
+var work = new Swiper('.partener-container', {
+  direction: 'vertical',
+  slidesPerView: 'auto',
+  freeMode: true,
+  scrollbar: {
+    el: '.swiper-work',
+    draggable: true,
+    snapOnRelease: false
+  },
+  mousewheel: true,
+  observer: true,
+});
+work.scrollbar.$dragEl.css('background', '#abc0c3');
+work.scrollbar.$el.css({ 'backgroundColor': '#fff' })
+$('.partener-container').on('mouseover', function () {
+  work.scrollbar.$el.css('width', '8px');
+})
+$('.partener-container').on('mouseout', function () {
+  work.scrollbar.$el.css('width', '5px');
+})
+//合作媒体移入显示
+$('#fanart-partener').on('mouseenter', function () {
+  $('.partener-container').fadeIn(10).animate({ 'top': '58px' }, 100)
+})
+$('#fanart-partener').on('mouseleave', function () {
+  $('.partener-container').fadeOut(0).animate({ 'top': '54px' }, 20)
+})
+//侧边栏
+$(document).ready(function () {
+  $(document).on('scroll', function () {
+    let wrapT = $('.wrap1').offset().top
+    console.log(wrapT)
+    console.log($(this).scrollTop())
+    if ($(this).scrollTop() >= wrapT) {
+      $('.sidebar ul').stop().animate({ 'height': '335px' }, 500)
+    }
+    if ($(this).scrollTop() < wrapT) {
+      $('.sidebar ul').stop().animate({ 'height': '270px' }, 500)
+    }
+  })
 })

@@ -1454,7 +1454,7 @@ body {
   background-repeat: no-repeat;
   background-position: -193px -253px;
 }
-.week-i1 {
+.week-i1,#fanart-partener .week-i1 {
   display: inline-block;
   vertical-align: middle;
   width: 20px;
@@ -1466,7 +1466,7 @@ body {
   margin: -1px 12px 0 12px;
   opacity: .7;
 }
-.week-i2 {
+.week-i2,#fanart-partener .week-i2 {
   display: inline-block;
   vertical-align: middle;
   width: 15px;
@@ -1476,7 +1476,7 @@ body {
   background-repeat: no-repeat;
   background-position: -342px -99px;
 }
-.week-i3 {
+.week-i3,#fanart-partener .week-i3 {
   display: inline-block;
   vertical-align: middle;
   width: 20px;
@@ -1512,7 +1512,7 @@ body {
     transform: translateX(0);
   }
 }
-.weekfree:hover .week-i2 {
+.weekfree:hover .week-i2,#fanart-partener:hover .week-i2 {
   animation: xjt 1.5s linear infinite;
 }
 .arrowhead:hover i  {
@@ -2695,4 +2695,365 @@ body {
 }
 .hero-img:hover p {
   color: #1da6ba;
+}
+.wrap5 {
+  width: 100%;
+  height: auto;
+  padding: 66px 0 82px 0;
+}
+.fanart {
+  float: left;
+  width: 820px;
+}
+.fanart-top {
+  position: relative;
+  width: 100%;
+  height: 35px;
+}
+.fanart-content {
+  position: relative;
+  width: 840px;
+  height: 368px;
+  overflow: hidden;
+  margin-top: 21px;
+}
+.fanart-content li {
+  float: left;
+  width: 192px;
+  height: 176px;
+  position: relative;
+  overflow: hidden;
+  background-color: #e3e2e2;
+  margin: 0 17px 17px 0;
+}
+.fanart-content li>a {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.fanart-content li>a img {
+  width: 192px;
+  height: 192px;
+  position: absolute;
+  left: 0;
+  top: -8px;
+  transform: scale(1);
+  transition: all 0.2s;
+}
+.fanart-hover {
+  width: 100%;
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  padding: 0 8px 6px 10px;
+  box-sizing: border-box;
+  background-color: rgba(0,0,0,0.7);
+}
+.fanart-hover h4 {
+  width: 100%;
+  line-height: 24px;
+  font-size: 12px;
+  text-align: left;
+  padding: 8px 0 8px 2px;
+  box-sizing: border-box;
+}
+.fanart-hover h4 a {
+  color: #fff;
+}
+.fanart-hover p a {
+  color: #b2b2b2;
+  font-size: 14px;
+}
+.fa-left {
+  float: left;
+}
+.fa-left img {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -6px;
+  margin-right: 4px;
+  border-radius: 50%;
+}
+.fa-right {
+  float: right;
+  position: relative;
+}
+.good-666 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 23px;
+  height: 17px;
+  background-image: url(../images/index-spr.png);
+  background-size: 638px 572px;
+  background-repeat: no-repeat;
+  background-position: -456px -226px;
+}
+.fanart-content li:hover .fanart-hover {
+  bottom: 0;
+  transition: all 0.3s;
+}
+.fanart-content li:hover>a img {
+  transform: scale(1.3);
+}
+.fanart-hover h4 a:hover {
+  text-decoration: underline;
+}
+.fanart-hover p a:hover {
+  color: #fff;
+}
+.fa-right:hover i {
+  background-size: 678px 572px;
+}
+.farant-right {
+  width: 496px;
+  float: right;
+}
+.farant-main {
+  position: relative;
+  float: left;
+  width: 241px;
+  height: 411px;
+  overflow: hidden;
+  margin-top: 13px;
+  cursor: pointer;
+  transform: translateY(0);
+  transition: all 0.3s;
+}
+.farant-main:hover {
+  transform: translateY(-10px);
+}
+.farant-right-right {
+  float: right;
+  margin-top: 55px;
+}
+.farant-right-right>li {
+  position: relative;
+  display: block;
+  margin-bottom: 16px;
+  width: 240px;
+  height: 87px;
+  cursor: pointer;
+}
+.farant-right-right>li img {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.farant-right-right>li>a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-size: 16px;
+  line-height: 87px;
+}
+.farant-right-right>li i {
+  display: inline-block;
+  vertical-align: middle;
+  width: 17px;
+  height: 17px;
+  background-image: url(../images/index-spr.png);
+  background-size: 638px 572px;
+  background-repeat: no-repeat;
+  background-position: -484px -226px;
+  margin: -3px 10px 0 10px;
+}
+.farant-right-right>li:nth-child(-n+3) {
+  filter: brightness(1);
+  transition: all 0.5s;
+}
+.farant-right-right>li:nth-child(-n+3):hover {
+  filter: brightness(1.1);
+}
+#fanart-partener {
+  position: relative;
+  float: right;
+  width: 239px;
+  height: 58px;
+  line-height: 58px;
+  z-index: 2;
+  margin-top: 2px;
+  background-image: url(../images/index-spr.png);
+  background-size: 638px 572px;
+  background-repeat: no-repeat;
+  background-position: -193px -253px;
+}
+#fanart-partener>a {
+  color: #fff;
+  font-size: 16px;
+  display: block;
+  text-align: center;
+  line-height: 58px;
+}
+.partener-container {
+  display: none;
+  width: 239px;
+  height: 266px;
+  padding: 6px 0;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  top: 54px;
+  box-shadow: 0 3px 10px #ccc;
+  text-align: left;
+}
+.partener-container ul {
+  width: 100%;
+  height: auto;
+}
+.partener-container ul li {
+  width: 100%;
+  height: 19px;
+  box-sizing: border-box;
+  padding-left: 12px;
+  line-height: 25px;
+  margin: 8px 0;
+}
+.partener-container a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+  line-height: 19px;
+  color: #676767;
+}
+.partener-container ul li:hover {
+  background-color: rgba(0,0,0,0.1);
+}
+footer {
+  position: relative;
+  width: 100%;
+  height: 175px;
+  padding: 45px 0;
+  background-color: #e3e2e2;
+  color: #9f9378;
+  font-size: 12px;
+  z-index: 1;
+}
+.tencent {
+  height: 100px;
+  width: auto;
+  line-height: 100px;
+  font-size: 0;
+  text-align: left;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  margin-top: -50px;
+}
+.tencent>a {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+  background-image: url(../images/topfoot-spr.png);
+  background-repeat: no-repeat;
+  background-size: 405px 178px;
+  margin: 0 24px 0 8px;
+}
+.tencent-logo {
+  background-position: -216px 0;
+  width: 189px;
+  height: 34px;
+}
+.riot {
+  background-position: -216px -84px;
+  width: 82px;
+  height: 28px;
+}
+.foot {
+  float: right;
+  width: 750px;
+  margin-top: 20px;
+}
+.foot li {
+  line-height: 20px;
+}
+.foot li a {
+  color: #9f9378;
+}
+.foot li a:hover {
+  text-decoration: underline;
+}
+.sidebar {
+  position: fixed;
+  right: 0;
+  bottom: 18%;
+  width: 70px;
+  height: auto;
+  z-index: 9999;
+  background-color: #fff;
+  border-radius: 9px 0 0 9px;
+}
+.sidebar ul {
+  height: 270px;
+  padding-bottom: 18px;
+  margin-left: 4px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.sidebar ul li {
+  width: 66px;
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 6px;
+}
+.sidebar span {
+  display: block;
+  width: 66px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+}
+.remen span i {
+  background-position: -239px -99px;
+}
+.sidebar i {
+  display: inline-block;
+  vertical-align: middle;
+  width: 18px;
+  height: 22px;
+  background-image: url(../images/comm-spr.png);
+  background-size: 393px 200px;
+  background-repeat: no-repeat;
+}
+.sidebar li a {
+  color: #92a8ab;
+  font-size: 12px;
+  text-align: center;
+}
+.videocenter span i {
+  background-position: -262px -99px;
+}
+.contest span i {
+  background-position: -220px -46px;
+  width: 22px;
+  height: 21px;
+}
+.heroziliao span i {
+  background-position: -269px -72px;
+  width: 19px;
+  height: 22px;
+}
+.fanartnav span i {
+  background-position: -287px -12px;
+  width: 24px;
+  height: 20px;
+}
+.polo-top {
+  position: relative;
+}
+.polo-top span i {
+  background-position: -193px -12px;
+  width: 33px;
+  height: 29px;
+}
+.polo-top  img {
+  display: none;
+  position: absolute;
+  width: 35px;
+  top: 1px;
+  left: 16px;
 }
