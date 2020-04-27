@@ -2986,9 +2986,10 @@ footer {
   z-index: 9999;
   background-color: #fff;
   border-radius: 9px 0 0 9px;
+  padding-top: 6px;
 }
 .sidebar ul {
-  height: 270px;
+  height: 310px;
   padding-bottom: 18px;
   margin-left: 4px;
   box-sizing: border-box;
@@ -2999,6 +3000,8 @@ footer {
   cursor: pointer;
   text-align: center;
   margin-bottom: 6px;
+  height: auto;
+  padding-top: 6px;
 }
 .sidebar span {
   display: block;
@@ -3056,4 +3059,15 @@ footer {
   width: 35px;
   top: 1px;
   left: 16px;
+}
+@keyframes nav {
+  0%{transform:translate(0);transform:translate(0)}
+  10%{transform:translateY(5px) scaleX(1.2) scaleY(.8);transform:translateY(5px) scaleX(1.2) scaleY(.8)}
+  30%{transform:translateY(-10px) scaleX(1) scaleY(1) rotateZ(5deg);transform:translateY(-13px) scaleX(1) scaleY(1) rotateZ(5deg)}
+  50%{transform:translateY(0) scale(1) rotateZ(0);transform:translateY(0) scale(1) rotateZ(0)}
+  55%{transform:translateY(0) scaleX(1.1) scaleY(.9) rotateZ(0);transform:translateY(0) scaleX(1.1) scaleY(.9) rotateZ(0)}
+  70%{transform:translateY(-4px) scaleX(1) scaleY(1) rotateZ(-2deg);transform:translateY(-4px) scaleX(1) scaleY(1) rotateZ(-2deg)}
+  80%{transform:translateY(0) scaleX(1) scaleY(1) rotateZ(0);transform:translateY(0) scaleX(1) scaleY(1) rotateZ(0)}
+  85%{transform:translateY(0) scaleX(1.05) scaleY(.95) rotateZ(0);transform:translateY(0) scaleX(1.05) scaleY(.95) rotateZ(0)}
+  100%{transform:translateY(0) scaleX(1) scaleY(1);transform:translateY(0) scaleX(1) scaleY(1)}
 }

@@ -352,16 +352,147 @@ $('#fanart-partener').on('mouseleave', function () {
   $('.partener-container').fadeOut(0).animate({ 'top': '54px' }, 20)
 })
 //侧边栏
+function initial() {
+  //移入
+  $('.remen').on('mouseenter', function () {
+    $('.remen a').css({ 'color': '#309cac', 'fontWeight': '700' })
+    $('.remen i').css({ 'backgroundPosition': '-216px -99px', 'animation': ' nav ease 1.5s' })
+  })
+  $('.videocenter').on('mouseenter', function () {
+    $('.videocenter a').css({ 'color': '#309cac', 'fontWeight': '700' })
+    $('.videocenter i').css({ 'backgroundPosition': '-193px -99px', 'animation': ' nav ease 1.5s' })
+  })
+  $('.contest').on('mouseenter', function () {
+    $('.contest a').css({ 'color': '#309cac', 'fontWeight': '700' })
+    $('.contest i').css({ 'backgroundPosition': '-247px -46px', 'animation': ' nav ease 1.5s' })
+  })
+  $('.heroziliao').on('mouseenter', function () {
+    $('.heroziliao a').css({ 'color': '#309cac', 'fontWeight': '700' })
+    $('.heroziliao i').css({ 'backgroundPosition': '-293px -72px', 'animation': ' nav ease 1.5s' })
+  })
+  $('.fanartnav').on('mouseenter', function () {
+    $('.fanartnav a').css({ 'color': '#309cac', 'fontWeight': '700' })
+    $('.fanartnav i').css({ 'backgroundPosition': '-258px -12px', 'animation': ' nav ease 1.5s' })
+  })
+  //移出
+  $('.remen').on('mouseleave', function () {
+    $('.remen a').css({ 'color': '#92a8ab', 'fontWeight': '400' })
+    $('.remen i').css({ 'backgroundPosition': '-239px -99px', 'animation': ' na' })
+  })
+  $('.videocenter').on('mouseleave', function () {
+    $('.videocenter a').css({ 'color': '#92a8ab', 'fontWeight': '400' })
+    $('.videocenter i').css({ 'backgroundPosition': '-262px -99px', 'animation': ' na' })
+  })
+  $('.contest').on('mouseleave', function () {
+    $('.contest a').css({ 'color': '#92a8ab', 'fontWeight': '400' })
+    $('.contest i').css({ 'backgroundPosition': '-220px -46px', 'animation': ' na' })
+  })
+  $('.heroziliao').on('mouseleave', function () {
+    $('.heroziliao a').css({ 'color': '#92a8ab', 'fontWeight': '400' })
+    $('.heroziliao i').css({ 'backgroundPosition': '-269px -72px', 'animation': ' na' })
+  })
+  $('.fanartnav').on('mouseleave', function () {
+    $('.fanartnav a').css({ 'color': '#92a8ab', 'fontWeight': '400' })
+    $('.fanartnav i').css({ 'backgroundPosition': '-287px -12px', 'animation': ' na' })
+  })
+  let wrap1 = $('.wrap1').offset().top
+  let wrap2 = $('.wrap2').offset().top
+  let wrap3 = $('.wrap3').offset().top
+  let wrap4 = $('.wrap4').offset().top
+  let wrap5 = $('.wrap5').offset().top - 100
+  //卷曲高度到一定值时显示动画
+  if ($(this).scrollTop() >= wrap1) {
+    $('.sidebar ul').stop().animate({ 'height': '368px' }, 500)
+    $('.polo-top i').css({ 'animation': 'nav ease 1.5s' })
+  } else {
+    $('.sidebar ul').stop().animate({ 'height': '310px' }, 500)
+    $('.polo-top i').css({ 'animation': ' na' })
+  }
+  if ($(this).scrollTop() >= wrap1 && $(this).scrollTop() < wrap2) {
+    $('.remen a').css({ 'color': '#309cac', 'fontWeight': '700' })
+    $('.remen i').css({ 'backgroundPosition': '-216px -99px', 'animation': ' nav ease 1.5s' })
+    //移出当前显示的li时继续亮着
+    $('.remen').on('mouseleave', function () {
+      $('.remen i').css({ 'backgroundPosition': '-216px -99px', 'animation': ' nav' })
+      $('.remen a').css({ 'color': '#309cac', 'fontWeight': '700' })
+    })
+  } else {
+    $('.remen a').css({ 'color': '#92a8ab', 'fontWeight': '400' })
+    $('.remen i').css({ 'backgroundPosition': '-239px -99px', 'animation': 'na' })
+  }
+  if ($(this).scrollTop() >= wrap2 && $(this).scrollTop() < wrap3) {
+    $('.videocenter a').css({ 'color': '#309cac', 'fontWeight': '700' })
+    $('.videocenter i').css({ 'backgroundPosition': '-193px -99px', 'animation': ' nav ease 1.5s' })
+    $('.videocenter').on('mouseleave', function () {
+      $('.videocenter i').css({ 'backgroundPosition': '-193px -99px', 'animation': ' nav' })
+      $('.videocenter a').css({ 'color': '#309cac', 'fontWeight': '700' })
+    })
+  } else {
+    $('.videocenter a').css({ 'color': '#92a8ab', 'fontWeight': '400' })
+    $('.videocenter i').css({ 'backgroundPosition': '-262px -99px', 'animation': 'na' })
+  }
+  if ($(this).scrollTop() >= wrap3 && $(this).scrollTop() < wrap4) {
+    $('.contest a').css({ 'color': '#309cac', 'fontWeight': '700' })
+    $('.contest i').css({ 'backgroundPosition': '-247px -46px', 'animation': ' nav ease 1.5s' })
+    $('.contest').on('mouseleave', function () {
+      $('.contest i').css({ 'backgroundPosition': '-247px -46px', 'animation': ' nav' })
+      $('.contest a').css({ 'color': '#309cac', 'fontWeight': '700' })
+    })
+  } else {
+    $('.contest a').css({ 'color': '#92a8ab', 'fontWeight': '400' })
+    $('.contest i').css({ 'backgroundPosition': '-220px -46px', 'animation': 'na' })
+  }
+  if ($(this).scrollTop() >= wrap4 && $(this).scrollTop() < wrap5) {
+    $('.heroziliao a').css({ 'color': '#309cac', 'fontWeight': '700' })
+    $('.heroziliao i').css({ 'backgroundPosition': '-293px -72px', 'animation': ' nav ease 1.5s' })
+    $('.heroziliao').on('mouseleave', function () {
+      $('.heroziliao i').css({ 'backgroundPosition': '-293px -72px', 'animation': ' nav' })
+      $('.heroziliao a').css({ 'color': '#309cac', 'fontWeight': '700' })
+    })
+  } else {
+    $('.heroziliao a').css({ 'color': '#92a8ab', 'fontWeight': '400' })
+    $('.heroziliao i').css({ 'backgroundPosition': '-269px -72px', 'animation': 'na' })
+  }
+  if ($(this).scrollTop() >= wrap5) {
+    $('.fanartnav a').css({ 'color': '#309cac', 'fontWeight': '700' })
+    $('.fanartnav i').css({ 'backgroundPosition': '-258px -12px', 'animation': ' nav ease 1.5s' })
+    $('.fanartnav').on('mouseleave', function () {
+      $('.fanartnav i').css({ 'backgroundPosition': '-258px -12px', 'animation': ' nav' })
+      $('.fanartnav a').css({ 'color': '#309cac', 'fontWeight': '700' })
+    })
+  } else {
+    $('.fanartnav a').css({ 'color': '#92a8ab', 'fontWeight': '400' })
+    $('.fanartnav i').css({ 'backgroundPosition': '-287px -12px', 'animation': 'na' })
+  }
+  //点击滚动到相应的地方
+  $('.remen').on('click', function () {
+    $('html').stop().animate({ 'scrollTop': wrap1 }, 200)
+  })
+  $('.videocenter').on('click', function () {
+    $('html').stop().animate({ 'scrollTop': wrap2 }, 200)
+  })
+  $('.contest').on('click', function () {
+    $('html').stop().animate({ 'scrollTop': wrap3 }, 200)
+  })
+  $('.heroziliao').on('click', function () {
+    $('html').stop().animate({ 'scrollTop': wrap4 }, 200)
+  })
+  $('.fanartnav').on('click', function () {
+    $('html').stop().animate({ 'scrollTop': wrap5 }, 200)
+  })
+  $('.polo-top').on('click', function () {
+    $('html').stop().animate({ 'scrollTop': 0 }, 200)
+  })
+}
 $(document).ready(function () {
   $(document).on('scroll', function () {
-    let wrapT = $('.wrap1').offset().top
-    console.log(wrapT)
-    console.log($(this).scrollTop())
-    if ($(this).scrollTop() >= wrapT) {
-      $('.sidebar ul').stop().animate({ 'height': '335px' }, 500)
-    }
-    if ($(this).scrollTop() < wrapT) {
-      $('.sidebar ul').stop().animate({ 'height': '270px' }, 500)
-    }
+    initial()
   })
+})
+initial()
+$('.polo-top').on('mouseenter', function () {
+  $(this).find('img').show()
+})
+$('.polo-top').on('mouseleave', function () {
+  $(this).find('img').hide()
 })
