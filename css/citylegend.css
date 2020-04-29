@@ -372,3 +372,47 @@ footer p {
 footer a {
   color: #c0c0c0;
 }
+.side-nav {
+  width: 100px;
+  position: fixed;
+  top: 50%;
+  right: 0px;
+  margin-top: -195px;
+}
+.side-nav>div {
+  width: 160px;
+  padding-bottom: 70px;
+}
+.side-nav>div a {
+  position: relative;
+  display: block;
+  width: 160px;
+  height: 45px;
+  line-height: 45px;
+  font-size: 16px;
+  color: #eed49d;
+}
+.side-nav .top-jt {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: #eed49d;
+  font-size: 16px;
+  width: 70px;
+  line-height: 40px;
+  height: 40px;
+  padding-top: 10px;
+  background: url(../images/jt-top.png);
+  background-repeat:  no-repeat;
+  background-position:  50% 0;
+}
+.side-nav a i {
+  display: none;
+  position: absolute;
+  top: 16px;
+  left: -24px;
+  width: 13px;
+  height: 13px;
+  background-image: url(../images/icon2.png);
+  background-repeat: no-repeat;
+}
