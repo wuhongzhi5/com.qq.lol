@@ -167,7 +167,6 @@ $('.week-hover').on('mouseleave', function () {
 //最新视频tab切换
 $('.new-video-top>ul li').on('mouseover', function () {
   let index = $(this).index()
-  console.log(index)
   $('.new-video-top>ul li').removeClass('tab-top-xd')
   $(this).addClass('tab-top-xd')
   $('.new-video>ul').removeClass('video-item')
@@ -466,22 +465,22 @@ function initial() {
   }
   //点击滚动到相应的地方
   $('.remen').on('click', function () {
-    $('html').stop().animate({ 'scrollTop': wrap1 }, 200)
+    $('html').stop().animate({ 'scrollTop': wrap1 }, 500)
   })
   $('.videocenter').on('click', function () {
-    $('html').stop().animate({ 'scrollTop': wrap2 }, 200)
+    $('html').stop().animate({ 'scrollTop': wrap2 }, 500)
   })
   $('.contest').on('click', function () {
-    $('html').stop().animate({ 'scrollTop': wrap3 }, 200)
+    $('html').stop().animate({ 'scrollTop': wrap3 }, 500)
   })
   $('.heroziliao').on('click', function () {
-    $('html').stop().animate({ 'scrollTop': wrap4 }, 200)
+    $('html').stop().animate({ 'scrollTop': wrap4 }, 500)
   })
   $('.fanartnav').on('click', function () {
-    $('html').stop().animate({ 'scrollTop': wrap5 }, 200)
+    $('html').stop().animate({ 'scrollTop': wrap5 }, 500)
   })
   $('.polo-top').on('click', function () {
-    $('html').stop().animate({ 'scrollTop': 0 }, 200)
+    $('html').stop().animate({ 'scrollTop': 0 }, 500)
   })
 }
 $(document).ready(function () {
